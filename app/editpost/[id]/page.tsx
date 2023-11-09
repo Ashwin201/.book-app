@@ -32,7 +32,7 @@ const EditPost = async ({ params }: { params: { id: string } }) => {
     const post = await getPost(id);
     return (
         <>
-            {post ? <EditPostForm post={post} /> : <div>Invalid Post</div>}
+            {post ? (<EditPostForm post={post} />) : (<p className=" flex items-center gap-2 font-medium text-lg text-gray-500">No Posts Available currently.</p>)}
         </>
     );
 }
