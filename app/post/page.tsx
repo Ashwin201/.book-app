@@ -4,6 +4,7 @@ import notavailable from "@/public/thumbnail-placeholder.webp"
 import React from 'react'
 import Button from '@/components/Button'
 import { LiaLinkSolid } from "react-icons/lia"
+import { AiFillRead } from "react-icons/ai"
 import { FiEdit } from "react-icons/fi"
 import Link from 'next/link'
 import DeleteBtn from '@/components/DeleteBtn'
@@ -37,7 +38,7 @@ const Post = async ({ id, author, authorEmail, date, thumbnail, category, title,
     return (
         <>
             <div className=' mt-6 mb-8 cursor-pointer hover:scale-[.99] transition-all duration-500'>
-                <Link href={`/post/${id}`} aria-label={title} >
+                <Link href={`/post/${id}`} aria-label="Post" >
                     <span className='font-medium  text-black dark:text-gray-200 text-sm '>Posted by :<span className='  text-base font-semibold'>&nbsp;{author}</span>
                         &nbsp;on&nbsp;<span className=' text-base  font-semibold'>{formattedDate}</span></span>
 
@@ -56,7 +57,7 @@ const Post = async ({ id, author, authorEmail, date, thumbnail, category, title,
                         <div className=' col-span-2 lg:col-span-1 flex flex-col justify-center'>
                             {
                                 category ? (
-                                    <Button href={""} icon="" text={category} arial={category} className=" w-fit bg-gray-900 text-white hover:bg-black hover:scale-95 transition-all duration-300 cursor-pointer " />
+                                    <div className='w-fit bg-gray-900 text-white hover:bg-black rounded-md py-[4px] px-3 hover:scale-[.98] transition-all duration-300 cursor-pointer  '>{category}</div>
                                 ) :
                                     (
                                         ""
@@ -86,7 +87,7 @@ const Post = async ({ id, author, authorEmail, date, thumbnail, category, title,
 
                             <div className='flex '>
 
-                                <Button href={`/post/${id}`} text="See More" arial={"See More"} icon={<FiEdit size={18} />} className="bg-slate-200 dark:bg-gray-800 dark:hover:bg-gray-900 mr-3  " />
+                                <Button href={`/post/${id}`} text="More..." arial={"See More"} icon={<AiFillRead size={20} />} className="bg-slate-200 dark:bg-gray-800 dark:hover:bg-gray-900 mr-3  " />
                                 {
                                     isEditable && (
                                         <ul className='flex items-center  bg-slate-200 dark:bg-gray-800 dark:hover:bg-gray-900  w-fit rounded-md'>
