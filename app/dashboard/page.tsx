@@ -51,7 +51,7 @@ const Dashboard = async () => {
                 ))
             )
                 : (
-                    <p className=" flex items-start   gap-2 font-medium text-lg text-gray-500">No Posts Available currently.
+                    <p className=" flex items-start flex-col sm:flex-row   gap-2 font-medium text-lg text-gray-500">No Posts Available currently.
                         <Link href={`/createpost`} aria-label='Create Post' className=' underline font-semibold text-gray-700'>Create Post</Link></p>
                 )
             }
