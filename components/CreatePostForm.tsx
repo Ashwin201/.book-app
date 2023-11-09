@@ -123,7 +123,7 @@ const CreatePostForm = () => {
 
     return (
         <>
-            <div className=' min-h-[69vh] z-10'>
+            <div className=' '>
                 <h1 className='text-2xl font-bold  mb-4'>Create a post </h1>
                 <form action="" className='flex flex-col gap-4' onSubmit={handleSubmit}>
                     <input onChange={(e) => setTitle(e.target.value)} type="text" placeholder='Enter Title' className=' dark:bg-gray-800 cursor-pointer w-full placeholder:text-base 

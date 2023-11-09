@@ -36,7 +36,7 @@ const Post = async ({ id, author, authorEmail, date, thumbnail, category, title,
     const formattedDate = dateObject.toLocaleDateString("en-US", options)
     return (
         <>
-            <div className='mb-6 mt-4 cursor-pointer hover:scale-[.99] transition-all duration-500'>
+            <div className=' mb-6 mt-6 xl:mb-6 xl:mt-4 cursor-pointer hover:scale-[.99] transition-all duration-500'>
                 <Link href={`/post/${id}`} aria-label={title} >
                     <span className='font-medium  text-black dark:text-gray-200 text-sm '>Posted by :<span className='  text-base font-semibold'>&nbsp;{author}</span>
                         &nbsp;on&nbsp;<span className=' text-base  font-semibold'>{formattedDate}</span></span>

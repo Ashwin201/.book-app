@@ -134,7 +134,7 @@ const EditPostForm = ({ post }: { post: Tpost }) => {
 
     return (
         <>
-            <div className=' min-h-[69vh] z-10'>
+            <div className=''>
 
                 <h1 className='text-2xl font-bold  mb-4'>Edit Post </h1>
                 <form action="" className='flex flex-col gap-4' onSubmit={handleSubmit}>

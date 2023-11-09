@@ -40,10 +40,12 @@ const Navbar = () => {
 
     return (
         <div className=' z-30 border-b-2 border-gray-300'>
-            <div className=" flex justify-between items-center  mb-[18px] relative ">
+            <div className=" flex justify-between items-center  mb-[15px] md:mb-5 relative ">
                 <ul >
                     <li >
-                        <Link href={"/"} aria-label='Home Logo BsBookHalf' className='flex items-center gap-2 font-serif font-bold  text-2xl dark:text-gray-200 text-black'><BsBookHalf size={30} />.book</Link>
+                        <Link href={"/"} aria-label='Home Logo BsBookHalf' className='flex items-center gap-2 font-serif font-bold  text-[22px] dark:text-gray-200 text-black'>
+                            <BsBookHalf size={30} />.book
+                        </Link>
                     </li>
 
                 </ul>
