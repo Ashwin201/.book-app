@@ -38,7 +38,7 @@ const Post = async ({ id, author, authorEmail, date, thumbnail, category, title,
     return (
         <>
             <div className=' mt-6 mb-8 cursor-pointer hover:scale-[.99] transition-all duration-500'>
-                <Link href={`/post/${id}`} aria-label="Post" >
+                <Link href={`/post/${id}`} aria-label={category} >
                     <span className='font-medium  text-black dark:text-gray-200 text-sm '>Posted by :<span className='  text-base font-semibold'>&nbsp;{author}</span>
                         &nbsp;on&nbsp;<span className=' text-base  font-semibold'>{formattedDate}</span></span>
 
