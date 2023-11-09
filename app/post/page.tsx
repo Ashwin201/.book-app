@@ -48,7 +48,7 @@ const Post = async ({ id, author, authorEmail, date, thumbnail, category, title,
 
                             {
                                 thumbnail ? (
-                                    <Image src={thumbnail} alt='Image Thumbnail' className=' absolute inset-0 rounded-md border-2 border-gray-400 object-cover ' fill />
+                                    <Image src={thumbnail} loading='eager' priority="true" alt='Image Thumbnail' className=' absolute inset-0 rounded-md border-2 border-gray-400 object-cover ' fill />
                                 ) : (
                                     <Image src={notavailable} alt='Image Thumbnail' fill className='absolute inset-0 rounded-md border-2 border-gray-400 object-cover' />
                                 )
@@ -77,7 +77,7 @@ const Post = async ({ id, author, authorEmail, date, thumbnail, category, title,
                                             <ul key={i} className="flex gap-2 items-center">
                                                 <li className='flex items-center gap-2 text-blue-600  overflow-x-hidden max-w-full text-ellipsis '>
                                                     <LiaLinkSolid size={20} />
-                                                    <Link href={link} aria-label={title} className=' hover:text-blue-800 text-blue-700 transition-all duration-500 
+                                                    <Link href={link} aria-label={"link"} className=' hover:text-blue-800 text-blue-700 transition-all duration-500 
                                                  inline-block whitespace-nowrap w-full overflow-hidden text-ellipsis font-semibold '>{link}</Link>
                                                 </li>
                                             </ul>
