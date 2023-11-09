@@ -85,7 +85,7 @@ const Navbar = () => {
                                      dark:hover:bg-gray-900 bg-slate-300 hover:bg-slate-400  hover:scale-95" />
                                 </span>
 
-                                <Image onClick={() => setIsPopupVisible((prev) => !prev)} src={session?.user?.image} width={40} height={40} alt='Image' className=' cursor-pointer   mb-1 border-2 border-gray-400 rounded-[50%]' />
+                                <Image onClick={() => setIsPopupVisible((prev) => !prev)} src={session?.user?.image as string} width={40} height={40} alt='Image' className=' cursor-pointer   mb-1 border-2 border-gray-400 rounded-[50%]' />
 
 
                             </div>

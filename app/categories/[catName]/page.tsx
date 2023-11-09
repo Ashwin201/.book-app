@@ -4,6 +4,10 @@ import { Tcategory, Tpost } from '@/app/types'
 // import Post from '@/components/Post';
 import Link from 'next/link';
 import React from 'react'
+export const metadata: Metadata = {
+    title: "Category",
+    description: "This is the posts related to particular category.",
+}
 const getPosts = async (catName: string): Promise<Tcategory[] | null> => {
     try {
         const res = await fetch(`${process.env.NEXTAUTH_URL}/api/categories/${catName}`, { cache: "no-store" })

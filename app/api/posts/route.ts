@@ -2,6 +2,7 @@ import prisma from "@/libs/prismadb";
 import { getServerSession } from "next-auth";
 import { NextResponse } from "next/server";
 import { authoptions } from "../auth/[...nextauth]/route";
+import { Tpost } from "@/app/types";
 
 export async function POST(req: Request) {
   const session = await getServerSession(authoptions);
@@ -44,9 +45,10 @@ export async function GET() {
     });
     return NextResponse.json(posts);
   } catch (err) {
-    console.log("Erro  =====>r", err);
-    return (
-      NextResponse.json({ message: "Couldn't get post." }), { status: 500 }
+    console.log("Error =====>", err);
+    return NextResponse.json(
+      { message: "Couldn't get post." },
+      { status: 500 }
     );
   }
 }

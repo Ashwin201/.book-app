@@ -18,7 +18,7 @@ const removeImage = async (publicId: string) => {
 
 export async function POST(req: Request) {
   const { publicId } = await req.json();
-  console.log(req);
+  // console.log(req);
   try {
     await removeImage(publicId);
     return NextResponse.json({ message: "success" });

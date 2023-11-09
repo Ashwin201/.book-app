@@ -6,7 +6,9 @@ import Link from "next/link";
 import Post from "./post/page";
 const getPosts = async (): Promise<Tpost[] | null> => {
   try {
-    const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts`, { cache: "no-store" })
+    const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts`, {
+      cache: "no-store",
+    })
     if (res.ok) {
       const posts = await res.json()
       return posts;
