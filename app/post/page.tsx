@@ -56,7 +56,7 @@ const Post = async ({ id, author, authorEmail, date, thumbnail, category, title,
                         <div className=' col-span-2 lg:col-span-1 flex flex-col justify-center'>
                             {
                                 category ? (
-                                    <Button href={""} icon="" text={category} className=" w-fit bg-gray-900 text-white hover:bg-black hover:scale-95 transition-all duration-300 cursor-pointer " />
+                                    <Button href={""} icon="" text={category} arial={category} className=" w-fit bg-gray-900 text-white hover:bg-black hover:scale-95 transition-all duration-300 cursor-pointer " />
                                 ) :
                                     (
                                         ""
@@ -86,12 +86,12 @@ const Post = async ({ id, author, authorEmail, date, thumbnail, category, title,
 
                             <div className='flex '>
 
-                                <Button href={`/post/${id}`} text="See More" icon={<FiEdit size={18} />} className="bg-slate-200 dark:bg-gray-800 dark:hover:bg-gray-900 mr-3  " />
+                                <Button href={`/post/${id}`} text="See More" arial={"See More"} icon={<FiEdit size={18} />} className="bg-slate-200 dark:bg-gray-800 dark:hover:bg-gray-900 mr-3  " />
                                 {
                                     isEditable && (
                                         <ul className='flex items-center  bg-slate-200 dark:bg-gray-800 dark:hover:bg-gray-900  w-fit rounded-md'>
                                             <li className='flex items-center gap-1  text-black dark:text-gray-200   '>
-                                                <Button href={`/editpost/${id}`} text="Edit" icon={<FiEdit size={18} />} className="  " />
+                                                <Button href={`/editpost/${id}`} text="Edit" arial={"Edit"} icon={<FiEdit size={18} />} className="  " />
                                             </li>
                                             <span className='text-base font-semibold text-gray-500'>|</span>
                                             <DeleteBtn id={id} />

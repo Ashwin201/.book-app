@@ -22,7 +22,7 @@ const CategoriesList = async () => {
         <div className=' flex flex-wrap gap-4 items-center lg:items-start justify-center lg:justify-start mb-10 '>
             {
                 categories && categories.map((item) => (
-                    <Button key={item.id} href={`/categories/${item.catName}`} icon="" text={item.catName} className=" bg-gray-900 text-white hover:bg-black hover:scale-95 transition-all duration-300 cursor-pointer " />
+                    <Button key={item.id} href={`/categories/${item.catName}`} arial={item.catName} icon="" text={item.catName} className=" bg-gray-900 text-white hover:bg-black hover:scale-95 transition-all duration-300 cursor-pointer " />
                 ))
             }
         </div>

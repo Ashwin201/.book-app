@@ -51,7 +51,7 @@ const Navbar = () => {
                 </ul>
                 {
                     status === "unauthenticated" || status === "loading" ? (
-                        <Button href="/signin" icon={<BiLogIn size={20} />} text="Sign in" className=" bg-slate-300 hover:bg-slate-400 dark:bg-gray-800 dark:hover:bg-gray-900   hover:scale-95" />
+                        <Button href="/signin" arial="Sign In" icon={<BiLogIn size={20} />} text="Sign in" className=" bg-slate-300 hover:bg-slate-400 dark:bg-gray-800 dark:hover:bg-gray-900   hover:scale-95" />
 
                     ) : (
                         <>
@@ -59,12 +59,12 @@ const Navbar = () => {
                              gap-3 rounded-md  items-end text-end 
                             ${isPopupVisible ? "flex" : "hidden"}`}>
                                 <div className=' flex flex-col'>
-                                    <Link href={"/dashboard"} aria-label='Ashwin Dashboard' onClick={() => setIsPopupVisible((prev) => !prev)} className=' font-semibold text-lg cursor-pointer  text-black dark:text-gray-200 '>{session?.user?.name}</Link>
-                                    <Link href={"/dashboard"} aria-label='Ashwin Dashboard' onClick={() => setIsPopupVisible((prev) => !prev)} className=' font-medium text-xs text-gray-600 dark:text-gray-400 cursor-pointer mb-2'>{session?.user?.email}</Link>
+                                    <Link href={"/dashboard"} aria-label='Dashboard' onClick={() => setIsPopupVisible((prev) => !prev)} className=' font-semibold text-lg cursor-pointer  text-black dark:text-gray-200 '>{session?.user?.name}</Link>
+                                    <Link href={"/dashboard"} aria-label=' Dashboard' onClick={() => setIsPopupVisible((prev) => !prev)} className=' font-medium text-xs text-gray-600 dark:text-gray-400 cursor-pointer mb-2'>{session?.user?.email}</Link>
                                 </div>
 
 
-                                <Link onClick={() => setIsPopupVisible((prev) => !prev)} href={"/dashboard"} aria-label='Create New' className=' hover:underline transition-all duration-300 
+                                <Link onClick={() => setIsPopupVisible((prev) => !prev)} href={"/dashboard"} aria-label='Dashboard' className=' hover:underline transition-all duration-300 
                                 text-base font-medium flex gap-2 text-black dark:text-gray-200' >
                                     <CgProfile size={23} /> <span>Dashboard</span>
                                 </Link>
@@ -83,7 +83,7 @@ const Navbar = () => {
 
                             <div className=' flex gap-4 items-center'>
                                 <span>
-                                    <Button href="/createpost" icon={<MdOutlineCreateNewFolder size={25} />} text="Create New" className=" hidden sm:block  dark:bg-gray-800
+                                    <Button href="/createpost" arial="Create New" icon={<MdOutlineCreateNewFolder size={25} />} text="Create New" className=" hidden sm:block  dark:bg-gray-800
                                      dark:hover:bg-gray-900 bg-slate-300 hover:bg-slate-400  hover:scale-95" />
                                 </span>
 

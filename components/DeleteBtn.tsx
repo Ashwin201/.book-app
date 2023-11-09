@@ -50,7 +50,7 @@ const DeleteBtn = ({ id }: { id: string }) => {
 
         <ul>
             <li className='flex items-center gap-2 ' onClick={handleDelete}>
-                <Button href={""} text="Delete" icon={<RiDeleteBin5Line size={20} />} className=" text-red-600" />
+                <Button href={""} text="Delete" arial="Delete" icon={<RiDeleteBin5Line size={20} />} className=" text-red-600" />
             </li>
         </ul>
     )

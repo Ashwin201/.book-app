@@ -57,7 +57,7 @@ const SinglePost = async ({ params }: { params: { id: string } }) => {
                             <div className="col-span-2 xl:col-span-1 flex flex-col xl:ml-3  gap-3 justify-center ">
                                 {
                                     post.category ? (
-                                        <Button href={""} icon="" text={post.category} className=" w-fit bg-gray-900 text-white hover:bg-black hover:scale-95 transition-all duration-300 cursor-pointer " />
+                                        <Button href={""} icon="" text={post.category} arial-label={post.category} className=" w-fit bg-gray-900 text-white hover:bg-black hover:scale-95 transition-all duration-300 cursor-pointer " />
                                     ) :
                                         (
                                             ""

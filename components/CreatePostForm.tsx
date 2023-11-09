@@ -139,7 +139,8 @@ const CreatePostForm = () => {
                                 <li className='flex items-center gap-2 mb-1 -mt-1  ' key={i}>
 
                                     <span className='text-blue-800 cursor-pointer '><CgLink size={23} /></span>
-                                    <Link href={link} className=' text-gray-900 dark:text-gray-300  inline-block whitespace-nowrap max-w-full overflow-hidden text-ellipsis font-semibold  '>{link}</Link>
+                                    <Link href={link} arial-label="Link"
+                                        className=' text-gray-900 dark:text-gray-300  inline-block whitespace-nowrap max-w-full overflow-hidden text-ellipsis font-semibold  '>{link}</Link>
                                     <span onClick={() => deleteLink(i)} className=' text-red-800 cursor-pointer'><RiDeleteBin5Line size={21} /></span>
 
                                 </li>
