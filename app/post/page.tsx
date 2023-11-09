@@ -48,7 +48,7 @@ const Post = async ({ id, author, authorEmail, date, thumbnail, category, title,
 
                             {
                                 thumbnail ? (
-                                    <Image src={thumbnail} loading='eager' alt='Image Thumbnail' className=' absolute inset-0 rounded-md border-2 border-gray-400 object-cover ' fill />
+                                    <Image src={thumbnail} alt='Image Thumbnail' className=' absolute inset-0 rounded-md border-2 border-gray-400 object-cover ' fill />
                                 ) : (
                                     <Image src={notavailable} alt='Image Thumbnail' fill className='absolute inset-0 rounded-md border-2 border-gray-400 object-cover' />
                                 )
