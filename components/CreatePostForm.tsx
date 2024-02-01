@@ -157,7 +157,8 @@ const CreatePostForm = () => {
                     </div>
 
                     {/* //Image Upload */}
-                    <CldUploadButton uploadPreset={process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET} onUpload={handleImageUpload} className={` relative w-full object-cover h-60 sm:h-80 justify-center items-center flex bg-slate-200  dark:bg-gray-800  border-2  border-gray-400  rounded-md ${imageUrl && " pointer-events-none"}`}>
+                    <CldUploadButton uploadPreset={process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET} onUpload={handleImageUpload} className={` relative w-full object-cover h-60 sm:h-80
+                     justify-center items-center flex bg-slate-200  dark:bg-gray-800  border-2  border-gray-400  rounded-md ${imageUrl && " pointer-events-none"}`}>
                         <div >
                             <BiImageAdd size={35} />
                         </div>
@@ -171,14 +172,16 @@ const CreatePostForm = () => {
                     </CldUploadButton>
                     {
                         publicId && (
-                            <button onClick={removeImage} className='flex gap-2 font-medium text-base  items-center rounded-md py-[6px] px-4 hover:scale-[.99] transition-all duration-300 cursor-pointer  text-white bg-red-800 w-fit'>
+                            <button onClick={removeImage} className='flex gap-2 font-medium text-base  items-center rounded-md py-[6px] px-4 hover:scale-[.99] transition-all 
+                            duration-300 cursor-pointer  text-white bg-red-800 w-fit'>
                                 Remove image
                             </button>
                         )
                     }
 
                     {/* For Selecting Categories*/}
-                    <select onChange={(e) => setSelectedCategory(e.target.value)} name='Select' className='dark:bg-gray-800 text-gray-600 dark:text-gray-400 font-medium cursor-pointer w-full relative border-2 border-gray-400 p-2 rounded-md hover:outline-none outline-none pr-4 appearance-none overflow-hidden mr-12 ' >
+                    <select onChange={(e) => setSelectedCategory(e.target.value)} name='Select' className='dark:bg-gray-800 text-gray-600 dark:text-gray-400
+                     font-medium cursor-pointer w-full relative border-2 border-gray-400 p-2 rounded-md hover:outline-none outline-none pr-4 appearance-none overflow-hidden mr-12 ' >
                         <option className=' text-base font-medium  ' value="">Select a category:</option>
                         {
                             categories && categories.map((item) => (

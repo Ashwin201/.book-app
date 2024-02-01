@@ -44,7 +44,7 @@ const Navbar = () => {
                 <ul >
                     <li >
                         <Link href={"/"} aria-label='Home Logo BsBookHalf' className='flex items-center gap-2 font-serif font-bold  text-[22px] dark:text-gray-200 text-black'>
-                            <BsBookHalf size={30} />.book
+                            <BsBookHalf size={30} />.bookk
                         </Link>
                     </li>
 
